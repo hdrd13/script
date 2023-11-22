@@ -103,6 +103,7 @@ export KBUILD_BUILD_USER="$USER"
 mkdir -p out
 
 make clean && make mrproper
+make defconfig ARCH=arm64 O=out
 make "$DEFCONFIG" O=out
 
 echo -e "$yellow << compiling the kernel >> \n $white"
